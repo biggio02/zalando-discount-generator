@@ -24,9 +24,9 @@ def getCode(catchall,regione):
 
     resp = s.post(url,headers=headers,json=data)
 
-    ciao  = resp.json()
+    response  = resp.json()
 
-    email = ciao["data"]['subscribeToNewsletter']['isEmailVerificationRequired']
+    email = response["data"]['subscribeToNewsletter']['isEmailVerificationRequired']
 
     if (email == False):
         print ("discount generated")
